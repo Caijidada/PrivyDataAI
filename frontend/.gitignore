@@ -1,0 +1,142 @@
+# ========================
+# Node / Frontend (Vite / Vue)
+# ========================
+node_modules/
+dist/
+build/
+.cache/
+.vite/
+.vitest/
+coverage/
+coverage-*.json
+.nyc_output/
+
+# lockfiles (通常建议保留 lock 文件以保证可复现构建，下面注释给出可选)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# environment files (local secrets)
+.env
+.env.*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.secrets.local
+
+# generated assets
+*.crt
+*.key
+
+# npm logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ========================
+# Vite / Vue specifics
+# ========================
+/public/dist/
+/public/build/
+/src/**/*.local.js
+*.tsbuildinfo
+
+# ========================
+# IDEs / Editors
+# ========================
+# VSCode
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# JetBrains (IntelliJ, WebStorm, etc.)
+.idea/
+*.iml
+out/
+
+# Mac / Windows / Linux
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~ 
+.nfs*
+
+# ========================
+# Docker
+# ========================
+docker-compose.override.yml
+.env.docker
+**/docker-compose.override.yml
+**/.docker/
+
+# ========================
+# Logs
+# ========================
+logs/
+*.log
+pids/
+*.pid
+*.seed
+
+# ========================
+# TypeScript
+# ========================
+# Incremental build cache
+*.tsbuildinfo
+
+# ========================
+# Testing
+# ========================
+/jest.setup.js
+/nyc_output/
+coverage/
+.vitest/
+
+# ========================
+# Security / Secrets / Keys
+# ========================
+# common secret/key files that should never be committed
+*.pem
+*.p12
+*.jks
+*.pfx
+secrets.yml
+
+# ========================
+# Java / Backend (if present)
+# ========================
+/target/
+/out/
+/bin/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+mvnw
+mvnw.cmd
+.settings/
+.classpath
+.project
+
+# Maven wrapper caches (optional)
+.mvn/wrapper/maven-wrapper.jar
+
+# ========================
+# Other common build artefacts
+# ========================
+coverage/
+*.local
+.cache/
+.idea_modules/
+
+# ========================
+# Optional: keep these files tracked even inside ignored folders
+# (Uncomment if you want to keep VSCode recommended extensions / workspace config)
+# ========================
+# !.vscode/extensions.json
+# !.vscode/settings.json

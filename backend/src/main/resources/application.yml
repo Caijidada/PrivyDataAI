@@ -1,0 +1,54 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: data-platform
+
+  # 数据库配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/data_platform?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+
+  # Redis配置
+  redis:
+    host: localhost
+    port: 6379
+    password:
+    timeout: 3000
+
+  # Jackson配置
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+
+# MyBatis Plus配置
+mybatis-plus:
+  mapper-locations: classpath:mapper/**/*.xml
+  type-aliases-package: com.platform.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# JWT配置
+jwt:
+  secret: zxdbvZJZkgggzXPwnIbjoYyc5ajRwMchCLTm4pCMAmc=
+  expiration: 86400  # 24小时(秒)
+
+# AI配置
+ai:
+  provider: ollama  # ollama 或 claude
+  ollama:
+    url: http://localhost:11434
+    model: llama3
+  claude:
+    api-key:
+    model: claude-sonnet-4-20250514
+
+# 日志配置
+logging:
+  level:
+    com.platform: DEBUG
+    org.springframework.web: INFO
